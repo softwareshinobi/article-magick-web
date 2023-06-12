@@ -34,7 +34,7 @@ function formatTextFromFirstTextBox(textToFormat) {
 	$.ajax({
 
 		type: "POST",
-		url: "http://localhost:44444/simple-text-format",
+		url: "http://desktop.mateomontenegro.online:8080/simple-text-format",
 
 		data: textFromFirstAndSecondTextBox,
 

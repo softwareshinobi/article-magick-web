@@ -22,7 +22,7 @@ function refreshStandardAPIHealthCheckStatus() {
 	$.ajax({
 
 		type: "GET",
-		url: "http://localhost:8888/health-check",
+		url: "http://desktop.mateomontenegro.online:8080/health-check",
 
 		contentType: "application/json; charset=utf-8",
 		crossDomain: true,

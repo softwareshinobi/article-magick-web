@@ -34,13 +34,15 @@ function formatTextFromFirstTextBox(textToFormat) {
 	$.ajax({
 
 		type: "POST",
-		url: "http://localhost:8888/text-operations/format-text",
+		url: "http://desktop.mateomontenegro.online:8080/simple-text-format",
 
-		data: textFromFirstAndSecondTextBox,
+		data: leftSideTextBox,
 
-		contentType: "application/json; charset=utf-8",
+		//contentType: "application/json; charset=utf-8",
+		contentType: "text/plain",
+
 		crossDomain: true,
-		dataType: "html",
+		dataType: "text",
 
 		success: function (data, status, jqXHR) {
 
@@ -96,9 +98,9 @@ function rewriteTextFromFirstTextBox() {
 	$.ajax({
 
 		type: "POST",
-		url: "http://localhost:8888/text-operations/rewrite-text",
+		url: "http://desktop.mateomontenegro.online:8080/simple-text-format",
 
-		data: textFromFirstAndSecondTextBox,
+		data: leftSideTextBox,
 
 		contentType: "application/json; charset=utf-8",
 		crossDomain: true,
