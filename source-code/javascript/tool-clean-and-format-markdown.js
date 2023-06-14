@@ -13,34 +13,18 @@ function formatTextFromFirstTextBox(textToFormat) {
 
 	console.debug("leftSideTextBox: " + leftSideTextBox);
 
-	rightSideTextBox=$( "#rightSideTextBox" ).text();
-
-	console.debug("rightSideTextBox: " + rightSideTextBox);
-
-	//
-
-	textFromFirstAndSecondTextBox = JSON.stringify({
-
-		originalContent: leftSideTextBox,
-
-		rewrittenContent: rightSideTextBox
-
-	});
-
-	console.debug("textFromFirstAndSecondTextBox: " + textFromFirstAndSecondTextBox);
-
 	//
 
 	$.ajax({
 
 		type: "POST",
-		url: "http://localhost:44444/simple-text-format",
+		url: "http://desktop.mateomontenegro.online:8080/simple-text-format",
 
-		data: textFromFirstAndSecondTextBox,
+		data: leftSideTextBox,
 
-		contentType: "application/json; charset=utf-8",
+		contentType: "text/plain",
 		crossDomain: true,
-		dataType: "json",
+		dataType: "text",
 
 		success: function (data, status, jqXHR) {
 

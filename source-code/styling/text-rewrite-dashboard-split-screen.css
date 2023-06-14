@@ -10,7 +10,8 @@ body {
 
 .left, .right {
 	
-## https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Text/Wrapping_Text
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Text/Wrapping_Text
+*/
 
 white-space: -moz-pre-wrap; /* Firefox */
 white-space: -pre-wrap; /* ancient Opera */
@@ -18,9 +19,11 @@ white-space: -o-pre-wrap; /* newer Opera */
 white-space: pre-wrap; /* Chrome; W3C standard */
 word-wrap: break-word; /* IE */
 
+/*
 ##	white-space: pre;
 
 ##	word-wrap: break-word;
+*/
 
 	height: 100%;
 
@@ -50,10 +53,15 @@ word-wrap: break-word; /* IE */
 
 	background-color: rgb(36, 0, 95);
 
+ padding-top: 75px;
+/*  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+*/
 }
 
 .right {
-
+ padding-top: 75px;
 	right: 0;
 
 	background-color: rgb(56, 1, 44);

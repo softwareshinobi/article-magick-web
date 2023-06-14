@@ -12,14 +12,9 @@
 - [insert]
 - [insert]
 
-## Constraints:
+## Links And Stuff:
 
-- Define contraints like budget, time, abilities, regulations, etc.
-- [insert]
-- [insert]
-- [insert]
-- [insert]
-- [insert]
+- https://dropways.github.io/deskapp/
 
 ## Risks:
 
