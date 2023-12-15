@@ -1,6 +1,10 @@
 
 $(document).ready(function () {
 
+	$("#originalContent").val("");
+
+	$( "#rewrittenContent" ).val("");
+
 	setInterval(formatTextFromFirstTextBox, 1000);
 
 });
@@ -11,21 +15,23 @@ function formatTextFromFirstTextBox() {
 
 	//
 
-	leftSideTextBox=$("#leftSideTextBox").text();
+	originalContent=$("#originalContent").val();
 
-	console.debug("leftSideTextBox: " + leftSideTextBox);
+	console.debug("originalContent: " + originalContent);
 
-	rightSideTextBox=$( "#rightSideTextBox" ).text();
+    //
 
-	console.debug("rightSideTextBox: " + rightSideTextBox);
+	rewrittenContent=$( "#rewrittenContent" ).val();
+
+	console.debug("rewrittenContent: " + rewrittenContent);
 
 	//
 
 	textFromFirstAndSecondTextBox = JSON.stringify({
 
-		originalContent: leftSideTextBox,
+		originalContent: originalContent,
 
-		rewrittenContent: rightSideTextBox
+		rewrittenContent: rewrittenContent
 
 	});
 
@@ -36,14 +42,17 @@ function formatTextFromFirstTextBox() {
 	$.ajax({
 
 		type: "POST",
-		url: "https://desktop.mateomontenegro.online:8080/article-magick/calculate-text-percentage-difference",
+
+		url: "http://localhost:8080/calculate-text-percentage-difference",
 
 		data: textFromFirstAndSecondTextBox,
 
 		contentType: "application/json; charset=utf-8",
+
 		//contentType: "text/plain",
 
 		crossDomain: true,
+
 		dataType: "text",
 
 		success: function (data, status, jqXHR) {
@@ -72,14 +81,22 @@ function formatTextFromFirstTextBox() {
 
 function setTextOfFirstTextBoxToRewrittenText(rewrittenText) {
 
-	console.debug(" -> :: setTextOfFirstTextBoxToRewrittenText()");
+    console.debug(" -> :: setTextOfFirstTextBoxToRewrittenText()");
 
-const result = parseFloat(rewrittenText)*100;
+    const result = parseFloat(rewrittenText)*100;
 
-aaaa = +result.toFixed(2);
+    aaaa = result.toFixed(2);
 
-	$("#welcomeModalButton").html(aaaa+"%");
+    /////////////////////////////////////
 
-	console.debug(" <- :: setTextOfFirstTextBoxToRewrittenText()");
+    const inverse = (1.0 - parseFloat(rewrittenText));
+
+    vvv = inverse.toFixed(2)*100;
+
+    $("#percentageOutputButton").html(aaaa+"% the same");
+
+    $("#percentageOutputButtonInverse").html(vvv+"% different");
+
+    console.debug(" <- :: setTextOfFirstTextBoxToRewrittenText()");
 
 }

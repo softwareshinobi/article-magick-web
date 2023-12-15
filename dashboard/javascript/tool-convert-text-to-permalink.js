@@ -1,81 +1,39 @@
 
 $(document).ready(function () {
-	
-	clearFormBoxes();
 
-	setInterval(processForm, 1000);
+	clearFormBoxes();
 
 });
 
 function clearFormBoxes(){
 
-//	setInputValue("");
+	setInputValue("");
 
-	//setLabelValue("");
-
-$("#originalContent").val("");
-
-$("#topArea").click();
-$("#bottomArea").click();
-
-//alert('clicked..');
-
-$("#rightSideTextBox").val("");
-
-$("#percentageOutputButton").html("--");
-
+	setLabelValue("");
 
 }
 
-function clearButtonValue() {
+function setInputValue(newStringValue) {
 
-	console.debug(" -> :: clearButtonValue()");	
-
-	$("#percentageOutputButton").html("");
-
-	console.debug(" <- :: clearButtonValue()");
-}
-
-function setButtonValue(percentageDifference) {
-
-	console.debug(" -> :: setButtonValue()");	
-
-const result = parseFloat(1.0-percentageDifference)*100;
-
-aaaa = +result.toFixed(1) + "% different";
-
-	$("#percentageOutputButton").html(aaaa);
-
-	console.debug(" <- :: setButtonValue()");
+	$("#leftSideTextBox").val(newStringValue);
 
 }
 
-function processForm() {
+function setLabelValue(newStringValue) {
+
+	$("#rightSideTextBox").val(newStringValue);
+
+}
+
+function processForm(textToFormat) {
 
 	console.debug(" -> :: formatTextFromFirstTextBox()");	
 
-
 	//
 
-	originalContent=$("#originalContent").val();
+	leftSideTextBox=$("#leftSideTextBox").val();
 
-	console.debug("originalContent: " + originalContent);
-
-	rightSideTextBox=$( "#rewrittenContent" ).val();
-
-	console.debug("rightSideTextBox: " + rightSideTextBox);
-
-	//
-
-	textFromFirstAndSecondTextBox = JSON.stringify({
-
-		originalContent: originalContent,
-
-		rewrittenContent: rightSideTextBox
-
-	});
-
-	console.debug("textFromFirstAndSecondTextBox: " + textFromFirstAndSecondTextBox);
+	console.debug("leftSideTextBox: " + leftSideTextBox);
 
 	//
 
@@ -83,13 +41,11 @@ function processForm() {
 
 		type: "POST",
 
-		url: "http://localhost:8080/calculate-text-percentage-difference",
+		url: "http://localhost:8080/convert-to-permalink",
 
-		data: textFromFirstAndSecondTextBox,
+        data: leftSideTextBox,
 
-		contentType: "application/json; charset=utf-8",
-	
-	//contentType: "text/plain",
+		contentType: "text/plain",
 
 		crossDomain: true,
 
@@ -97,9 +53,11 @@ function processForm() {
 
 		success: function (data, status, jqXHR) {
 
-			//alert("good");
+            console.log("data");
 
-			setButtonValue(data);
+            console.log(data);
+
+            setLabelValue(data);
 
 		},
 
@@ -118,5 +76,5 @@ function processForm() {
 	//
 
 	console.debug(" <- :: formatTextFromFirstTextBox()");
-
+  
 }
