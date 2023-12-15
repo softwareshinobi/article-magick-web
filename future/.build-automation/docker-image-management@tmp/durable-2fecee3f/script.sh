@@ -1,1 +1,0 @@
-bash ./build-docker-image-from-source.bash
