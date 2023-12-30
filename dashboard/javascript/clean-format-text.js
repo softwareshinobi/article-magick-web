@@ -3,27 +3,23 @@ $(document).ready(function () {
 	
 	clearFormBoxes();
 
+    $("#topArea").click();
+
 	setInterval(processForm, 1000);
 
 });
 
 function clearFormBoxes(){
 
-//	setInputValue("");
+    $("#originalContent").val("");
 
-	//setLabelValue("");
+    $("#topArea").click();
 
-$("#originalContent").val("");
+    $("#bottomArea").click();
 
-$("#topArea").click();
-$("#bottomArea").click();
+    $("#rightSideTextBox").val("");
 
-//alert('clicked..');
-
-$("#rightSideTextBox").val("");
-
-$("#percentageOutputButton").html("--");
-
+    $("#percentageOutputButton").html("--");
 
 }
 
@@ -40,9 +36,6 @@ function setButtonValue(percentageDifference) {
 
 	console.debug(" -> :: setButtonValue()");	
 
-///##const result = parseFloat(1.0-percentageDifference)*100;
-///aaaa = +result.toFixed(1) + "% different";
-
 	$("#rewrittenContent").html(percentageDifference);
 
 	console.debug(" <- :: setButtonValue()");
@@ -53,9 +46,6 @@ function processForm() {
 
 	console.debug(" -> :: formatTextFromFirstTextBox()");	
 
-
-	//
-
 	originalContent=$("#originalContent").val();
 
 	console.debug("originalContent: " + originalContent);
@@ -63,8 +53,6 @@ function processForm() {
 	rightSideTextBox=$( "#rewrittenContent" ).val();
 
 	console.debug("rightSideTextBox: " + rightSideTextBox);
-
-	//
 
 	textFromFirstAndSecondTextBox = JSON.stringify({
 
@@ -76,27 +64,21 @@ function processForm() {
 
 	console.debug("textFromFirstAndSecondTextBox: " + textFromFirstAndSecondTextBox);
 
-	//
-
 	$.ajax({
 
 		type: "POST",
 
-		url: "http://localhost:8080/simple-text-format",
+		url: "http://api.articlemagick.softwareshinobi.digital:8888/article-magick/simple-format",
 
 		data: textFromFirstAndSecondTextBox,
 
 		contentType: "application/json; charset=utf-8",
-	
-	//contentType: "text/plain",
 
 		crossDomain: true,
 
 		dataType: "text",
 
 		success: function (data, status, jqXHR) {
-
-			//alert("good");
 
 			setButtonValue(data);
 
@@ -113,8 +95,6 @@ function processForm() {
 		}
 
 	});
-
-	//
 
 	console.debug(" <- :: formatTextFromFirstTextBox()");
 

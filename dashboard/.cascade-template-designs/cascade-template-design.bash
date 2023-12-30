@@ -25,3 +25,5 @@ echo
 ##
 
 find $sourceDirectory -iname "*.html" -exec python3 cascade-template-design.py {} \;
+
+find $sourceDirectory -iname "*.html" -exec python3 cascade-backend-rest-server.py {} \;

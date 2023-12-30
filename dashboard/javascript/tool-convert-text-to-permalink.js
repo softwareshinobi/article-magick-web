@@ -1,9 +1,13 @@
 
 $(document).ready(function () {
-
+	
 	clearFormBoxes();
 
+	setInterval(processForm, 1000);
+
 });
+
+
 
 function clearFormBoxes(){
 
@@ -41,7 +45,7 @@ function processForm(textToFormat) {
 
 		type: "POST",
 
-		url: "http://localhost:8080/convert-to-permalink",
+		url: "http://api.articlemagick.softwareshinobi.digital:8888/article-magick/convert-permalink",
 
         data: leftSideTextBox,
 

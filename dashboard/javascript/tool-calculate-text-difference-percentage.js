@@ -43,7 +43,7 @@ function formatTextFromFirstTextBox() {
 
 		type: "POST",
 
-		url: "http://localhost:8080/calculate-text-percentage-difference",
+		url: "http://api.articlemagick.softwareshinobi.digital:8888/article-magick/calculate-similarity",
 
 		data: textFromFirstAndSecondTextBox,
 

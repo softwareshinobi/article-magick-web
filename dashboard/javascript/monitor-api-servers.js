@@ -1,5 +1,5 @@
 
-$(document).ready(function () {
+$(document).ready(function () {  
 
 	refreshAPIHealthCheckStatus();
 
@@ -15,13 +15,11 @@ function refreshStandardAPIHealthCheckStatus() {
 
 	console.debug(" -> :: refreshSpecialAPIHealthCheckStatus()");	
 
-	//
-
 	$.ajax({
 
 		type: "GET",
 
-		url: "http://localhost:8080/health-check",
+		url: "http://api.articlemagick.softwareshinobi.digital:8888/article-magick/health-check",
 
 		contentType: "application/json; charset=utf-8",
 
@@ -43,7 +41,7 @@ function refreshStandardAPIHealthCheckStatus() {
 
 		error: function (jqXHR, status) {
 
-			console.log("Something Went Wrong Issuing Post Request");
+			console.log("Something Went Wrong");
 
 			console.log(jqXHR);
 
