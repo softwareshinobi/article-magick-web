@@ -1,23 +1,21 @@
-version: "3"
+version: '3.8'
 
 services:
 
-    software-shinobi-dashboard:
+    article-magick-web:
 
-        container_name: software-shinobi-dashboard
+        container_name: article-magick-web
+        
+        image: softwareshinobi/article-magick-web:2.4
 
-        image: softwareshinobi/software-shinobi-dashboard:latest
+        build: 
+
+            context: .
+
+            dockerfile: Dockerfile
 
         restart: always
-        
+
         ports:
 
-            - "42081:80"
-            
-        networks:
-        
-            - network-software-shinobi-dashboard
-            
-networks:
-
-    network-software-shinobi-dashboard:
+            - "80:8888"
