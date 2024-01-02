@@ -45,7 +45,7 @@ function processForm(textToFormat) {
 
 		type: "POST",
 
-		url: "http://apis.softwareshinobi.digital/article-magick/convert-permalink",
+		url: "https://api.articlemagick.softwareshinobi.digital/article-magick/convert-permalink",
 
         data: leftSideTextBox,
 
