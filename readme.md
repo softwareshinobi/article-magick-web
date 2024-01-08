@@ -50,6 +50,6 @@ Visit our website or contact us for more information.
 
 Let's revolutionize your content together.
 
-[Use the Article Magick dashboard!](https://articlemagick.softwareshinobi.digital/)
+[Use the Article Magick dashboard!](https://articlemagick.softwareshinobi.digital/dashboard/rewrite-percent-difference.html)
 
 ## namaste.
