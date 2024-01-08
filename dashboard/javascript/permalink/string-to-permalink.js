@@ -1,13 +1,11 @@
 
 $(document).ready(function () {
-	
+
 	clearFormBoxes();
 
-	setInterval(processForm, 1000);
+    setInterval(processForm, 1000);
 
 });
-
-
 
 function clearFormBoxes(){
 
@@ -17,7 +15,7 @@ function clearFormBoxes(){
 
 }
 
-function setInputValue(newStringValue) {
+function setInputValue(newStringValue) {   
 
 	$("#toPermalinkInput").val(newStringValue);
 
@@ -29,20 +27,15 @@ function setLabelValue(newStringValue) {
 
 }
 
-function processForm(textToFormat) {
+function processForm() {
 
-	console.debug(" -> :: formatTextFromFirstTextBox()");	
-	console.debug(" -> :: formatTextFromFirstTextBox()"+textToFormat);	
+	console.debug(" -> :: processForm()");	
+
 	//
-
-if (textToFormat === "") {
-   	console.debug("NULL NULL NUYLL: "); 
-return ;
-  }console.log("not");
 
 	leftSideTextBox=$("#toPermalinkInput").val();
 
-	console.debug("toPermalinkInput: " + leftSideTextBox);
+	console.debug("toPermalinkInput /" + leftSideTextBox);
 
 	//
 
@@ -62,9 +55,7 @@ return ;
 
 		success: function (data, status, jqXHR) {
 
-            console.log("data");
-
-            console.log(data);
+            console.log("data", data);
 
             setLabelValue(data);
 
@@ -84,6 +75,6 @@ return ;
 
 	//
 
-	console.debug(" <- :: formatTextFromFirstTextBox()");
+	console.debug(" <- :: processForm()");
   
 }
