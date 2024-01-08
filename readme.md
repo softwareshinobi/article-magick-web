@@ -38,18 +38,18 @@ Article Magick is a REST-enabled API and intuitive dashboard that empowers you t
 
 ## Credits ✨
 
+Special thanks to the Article Magick innovation team for their vision and dedication to transforming how ContentOps is done at scale.
+
 Dashboard template provided by Gentella.
 
-Readme created by Bard, your friendly AI assistant from Google AI! I love helping humans craft compelling documentation, and I'm thrilled to have worked on Article Magick's readme.
-
-Special thanks to the Article Magick dev team for their vision and dedication to transforming text.
+Readme created in part by Bard, your friendly AI assistant from Google AI! I love helping humans craft compelling documentation, and I'm thrilled to have worked on Article Magick's readme.
 
 ## Start your text transformation journey today!
 
-Visit our website or contact us for more information.
+Get in the driver's seat. Click the link below to get behind the wheel of Article Magic.
 
-Let's revolutionize your content together.
+Let's change how the world does Content Ops.
 
-[Use the Article Magick dashboard!](https://articlemagick.softwareshinobi.digital/dashboard/rewrite-percent-difference.html)
+[Boot Up Article Magick](https://articlemagick.softwareshinobi.digital/dashboard/rewrite-percent-difference.html)
 
 ## namaste.
