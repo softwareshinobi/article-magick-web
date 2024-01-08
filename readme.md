@@ -1,6 +1,6 @@
 # Brew Up TextOps Alchemy w/ Article Magick ✨
 
-Harness the power of text manipulation and analysis to transform your content and unlock valuable insights.
+Harness the power of content creation and automation to transform your ContentOps.
 
 ![Unleash the Magic of Text with Article Magick](/cover.png)
 
@@ -12,9 +12,9 @@ Article Magick is a REST-enabled API and intuitive dashboard that empowers you t
 
 * `Text Cleaning and Formatting`: Ensure consistency and clarity with automated text cleaning and formatting functions.
 
-* `API Monitor Screen`: Track API performance and usage in real-time, staying informed and proactive.
-
 * `Percent Difference Calculations`: Pinpoint changes and variations between text samples, enabling precise analysis and version control.
+
+* `API Monitor Screen`: Track API performance and usage in real-time, staying informed and proactive.
 
 ## Benefits
 
@@ -38,7 +38,7 @@ Article Magick is a REST-enabled API and intuitive dashboard that empowers you t
 
 ## Credits ✨
 
-Dashboard template` provided by Gentella.
+Dashboard template provided by Gentella.
 
 Readme created by Bard, your friendly AI assistant from Google AI! I love helping humans craft compelling documentation, and I'm thrilled to have worked on Article Magick's readme.
 
