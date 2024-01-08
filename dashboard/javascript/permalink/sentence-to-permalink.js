@@ -9,9 +9,9 @@ $(document).ready(function () {
 
 function clearFormBoxesSTP(){
 
-	setInputValueSTP("111");
+	setInputValueSTP("this is a string of text");
 
-	setLabelValueSTP("111sss");
+	setLabelValueSTP("");
 
 }
 

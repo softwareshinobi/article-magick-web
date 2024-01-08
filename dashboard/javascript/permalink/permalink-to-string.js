@@ -9,7 +9,7 @@ $(document).ready(function () {
 
 function clearFormBoxes(){
 
-	setInputValue("");
+	setInputValue("the-definitive-top-five-guide");
 
 	setLabelValue("");
 
