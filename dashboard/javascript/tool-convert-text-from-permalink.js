@@ -17,13 +17,13 @@ function clearFormBoxes(){
 
 function setInputValue(newStringValue) {
 
-	$("#fromLeftSideTextBox").val(newStringValue);
+	$("#fromPermalinkInput").val(newStringValue);
 
 }
 
 function setLabelValue(newStringValue) {
 
-	$("#fromRightSideTextBox").val(newStringValue);
+	$("#fromPermalinkOutput").val(newStringValue);
 
 }
 
@@ -33,9 +33,9 @@ function processForm(textToFormat) {
 
 	//
 
-	leftSideTextBox=$("#fromLeftSideTextBox").val();
+	leftSideTextBox=$("#fromPermalinkInput").val();
 
-	console.debug("fromRightSideTextBox: " + leftSideTextBox);
+	console.debug("fromPermalinkInput: " + leftSideTextBox);
 
 	//
 

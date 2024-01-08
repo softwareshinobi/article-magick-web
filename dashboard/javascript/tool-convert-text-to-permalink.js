@@ -19,25 +19,30 @@ function clearFormBoxes(){
 
 function setInputValue(newStringValue) {
 
-	$("#leftSideTextBox").val(newStringValue);
+	$("#toPermalinkInput").val(newStringValue);
 
 }
 
 function setLabelValue(newStringValue) {
 
-	$("#rightSideTextBox").val(newStringValue);
+	$("#toPermalinkOutput").val(newStringValue);
 
 }
 
 function processForm(textToFormat) {
 
 	console.debug(" -> :: formatTextFromFirstTextBox()");	
-
+	console.debug(" -> :: formatTextFromFirstTextBox()"+textToFormat);	
 	//
 
-	leftSideTextBox=$("#leftSideTextBox").val();
+if (textToFormat === "") {
+   	console.debug("NULL NULL NUYLL: "); 
+return ;
+  }console.log("not");
 
-	console.debug("leftSideTextBox: " + leftSideTextBox);
+	leftSideTextBox=$("#toPermalinkInput").val();
+
+	console.debug("toPermalinkInput: " + leftSideTextBox);
 
 	//
 
