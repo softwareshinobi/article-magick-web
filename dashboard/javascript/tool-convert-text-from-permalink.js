@@ -7,8 +7,6 @@ $(document).ready(function () {
 
 });
 
-
-
 function clearFormBoxes(){
 
 	setInputValue("");
@@ -19,13 +17,13 @@ function clearFormBoxes(){
 
 function setInputValue(newStringValue) {
 
-	$("#leftSideTextBox").val(newStringValue);
+	$("#fromLeftSideTextBox").val(newStringValue);
 
 }
 
 function setLabelValue(newStringValue) {
 
-	$("#rightSideTextBox").val(newStringValue);
+	$("#fromRightSideTextBox").val(newStringValue);
 
 }
 
@@ -35,9 +33,9 @@ function processForm(textToFormat) {
 
 	//
 
-	leftSideTextBox=$("#leftSideTextBox").val();
+	leftSideTextBox=$("#fromLeftSideTextBox").val();
 
-	console.debug("leftSideTextBox: " + leftSideTextBox);
+	console.debug("fromRightSideTextBox: " + leftSideTextBox);
 
 	//
 
@@ -45,7 +43,7 @@ function processForm(textToFormat) {
 
 		type: "POST",
 
-		url: "https://api.articlemagick.softwareshinobi.digital/article-magick/convert-to-permalink",
+		url: "https://api.articlemagick.softwareshinobi.digital/article-magick/convert-from-permalink",
 
         data: leftSideTextBox,
 
